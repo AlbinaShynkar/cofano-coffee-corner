@@ -11,7 +11,7 @@ In order to be able to run the application, you will need to have an application
 Clone the project directly from Git to install the web-app. Navigate to your desired folder, and apply:
 
 ```bash
-git clone https://git.snt.utwente.nl/s2305399/cofanocoffeecorner.git
+git clone https://github.com/AlbinaShynkar/cofano-coffee-corner.git
 ```
 Add the project to your application server and start the server using your preferred Integrated Development Environment (IDE). Then click [here](http://localhost:8080/coffeecorner/) to use the installed Maven project or simply copy the following URL to your chosen web browser: `http://localhost:8080/coffeecorner/`
 
