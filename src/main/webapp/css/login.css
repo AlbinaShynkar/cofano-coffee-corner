@@ -1,0 +1,55 @@
+.cofano-login-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--c-img-wash), url("../img/cofano_coffeecorner_login_bg_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cofano-login-panel {
+    width: 450px;
+    height: 600px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--c-colour-panel-background);
+}
+
+.cofano-login-panel > * {
+    margin-top: 40px;
+}
+
+.cofano-login-panel-image {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+}
+
+.cofano-login-panel-content {
+    align-self: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.cofano-login-panel-title {
+    font-family: var(--roboto_slab);
+    font-weight: 400;
+}
+
+.cofano-login-panel-body {
+    font-size: 14px;
+}
+
+#my-signin2 > div {
+    width: 100% !important;
+}
+
+#my-signin2 span {
+    color: white;
+}
+

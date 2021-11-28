@@ -1,0 +1,111 @@
+.shadow-1, .shadow-1-hover,
+.shadow-2, .shadow-2-hover,
+.shadow-3, .shadow-3-hover,
+.shadow-4,
+.shadow-5 {
+    transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.shadow-1, .shadow-1-hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.shadow-2, .shadow-2-hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-3, .shadow-3-hover,
+.shadow-1-hover:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-4,
+.shadow-2-hover:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.shadow-5,
+.shadow-3-hover:hover {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
+
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.button {
+    min-height: 35px;
+    border-radius: 35px;
+    padding: 0px 20px;
+}
+
+.button:hover, .button-round:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.button-round {
+    width: 56px;
+    height: 56px;
+    border-radius: 56px;
+}
+
+.button-round span {
+    color: white;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+.button-teal, .button-teal.active {
+    background-color: var(--c-colour-teal);
+    color: white;
+}
+
+.button-teal:hover, .button-teal.active:hover {
+    background-color: var(--c-colour-teal-hover);
+}
+
+.button-orange, .button-orange.active {
+    background-color: var(--c-colour-orange);
+    color: white;
+}
+
+.button-orange:hover, .button-orange.active:hover {
+    background-color: var(--c-colour-orange-hover);
+}
+
+.button-red, .button-red.active {
+    background-color: var(--c-colour-red);
+    color: white;
+}
+
+.button-red:hover, .button-red.active:hover {
+    background-color: var(--c-colour-red-hover);
+}
+
+
+
+
+.seperator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.seperator::before,
+.seperator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid var(--c-colour-text);
+}
+
+.seperator::before {
+    margin-right: 1em;
+}
+
+.seperator::after {
+    margin-left: 1em;
+}

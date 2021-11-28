@@ -1,0 +1,365 @@
+#cofano-event .row:not(.cofano-content-header) {
+    margin-top: 20px;
+}
+
+#cofano-event .cofano-content-timetable-wrapper {
+    position: relative;
+    flex-grow: 1;
+    min-height: 250px;
+}
+
+#cofano-event .cofano-timetable-add-button {
+    position: absolute;
+    bottom: 36px;
+    right: 20px;
+    z-index: 2;
+}
+
+#cofano-event .cofano-content-timetable {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    overflow-x: scroll;
+    background-color: var(--light);
+}
+
+#cofano-event .cofano-content-timetable-header {
+    padding-left: 50px;
+    height: 40px;
+    align-items: center;
+    box-shadow: 0 0 8px grey;
+    display: flex;
+}
+
+#cofano-event .cofano-content-timetable-body {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: nowrap;
+    position: relative;
+}
+
+#cofano-event .cofano-timetable-segment {
+    border-right: 1px solid #cecece;
+    height: 100%;
+}
+
+#cofano-event .cofano-timetable-segment:nth-of-type(4n + 1) {
+    border-color: #868686;
+    border-width: 2px;
+}
+
+#cofano-event .cofano-timetable-segment-label {
+    text-align: center;
+}
+
+.cofano-content-timetable-indicator {
+    position: absolute;
+    border: 1px solid var(--light);
+    width: 4px;
+    background-color: var(--c-colour-red);
+    z-index: 1;
+    height: 100%;
+}
+
+.cofano-content-timetable-indicator::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: var(--c-colour-red);
+    border-radius: 50%;
+    left: -4px;
+    top: -5px;
+}
+
+#cofano-event .cofano-event-details .col {
+    background-color: var(--light);
+}
+
+#cofano-event .cofano-content-event-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow-y: scroll;
+}
+
+#cofano-event .cofano-content-event-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
+#cofano-event .cofano-timetable-event {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cofano-event .cofano-timetable-event > * {
+    color: white;
+}
+
+#cofano-event .cofano-timetable-event .cofano-event-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+#cofano-event .cofano-timetable-event .cofano-event-time {
+    margin-left: 10px;
+    font-size: 70%;
+}
+
+#cofano-event .cofano-timetable-event:hover {
+    z-index: 1;
+}
+
+#cofano-event .cofano-timetable-event.collapsed:hover {
+    width: initial !important;
+}
+
+#cofano-event .cofano-timetable-event.collapsed:hover .cofano-event-title {
+    min-width: initial !important;
+}
+
+
+#cofano-event .cofano-content-timetable-data-wrapper {
+    height: 32%;
+    position: relative;
+    flex-direction: column;
+}
+
+#cofano-event .cofano-event-details-wrapper {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: var(--light);
+}
+
+#cofano-event .cofano-event-details {
+    min-height: 100%;
+    padding: 20px;
+    display: flex;
+}
+
+#cofano-event .cofano-content-eventlist-details .cofano-event-details {
+    height: unset;
+}
+
+#cofano-event .cofano-event-details > div {
+    padding: 0 10px;
+}
+
+#cofano-event .cofano-content-eventlist-wrapper > .seperator {
+    height: unset;
+    overflow: unset;
+    width: 100%;
+    margin: 40px 15px;
+    display: none;
+}
+
+
+#cofano-event .cofano-event-details-attrs {
+    flex-grow: 1;
+}
+
+#cofano-event .cofano-event-details-metadata {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+#cofano-event .cofano-event-details-metadata .cofano-event-details-title {
+    margin: 0;
+    font-family: var(--roboto_slab);
+}
+
+#cofano-event .cofano-event-details-metadata .cofano-event-details-body {
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+#cofano-event .cofano-event-details-button-wrapper button {
+    margin-right: 20px;
+}
+
+#cofano-event .cofano-event-details-attrs ul {
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#cofano-event .cofano-event-details-attrs span {
+    font-size: 14px;
+}
+
+#cofano-event .cofano-event-details-attrs .cofano-event-details-attr > span:first-of-type {
+    font-weight: bold;
+    width: 80px;
+    display: inline-block;
+}
+
+#cofano-event .cofano-event-details-attrs .cofano-event-details-attr:nth-of-type(2) > span:last-of-type {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+#cofano-event .cofano-event-signedup-wrapper {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: var(--light);
+}
+
+#cofano-event .cofano-event-signedup {
+    overflow-y: auto;
+    height: 100%;
+    max-height: 200px;
+}
+
+#cofano-event .cofano-event-signedup-item {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+}
+
+#cofano-event .cofano-content-timetable-data-wrapper .cofano-event-signedup-item {
+    padding: 10px 20px;
+}
+
+#cofano-event .cofano-event-signedup-item .profile-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+#cofano-event .cofano-event-signedup-item .cofano-event-signedup-item-name {
+    margin: 0;
+}
+
+#cofano-event .cofano-content-eventlist-wrapper {
+    min-height: 0;
+    flex-grow: 1;
+}
+
+#cofano-event .cofano-content-eventlist-wrapper > div {
+    height: fit-content;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+
+#cofano-event .cofano-content-eventlist {
+    max-height: 100%;
+}
+
+#cofano-event .cofano-eventlist-event {
+    max-height: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+#cofano-event .cofano-eventlist-event .card-body > div {
+    padding: 20px;
+}
+
+#cofano-event .cofano-eventlist-event .cofano-eventlist-event-img {
+    display: none;
+}
+
+#cofano-event .cofano-eventlist-event .cofano-eventlist-event-header {
+    color: white;
+    font-size: 14px;
+}
+
+#cofano-event cofano-content-eventlist .cofano-eventlist-event-body {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+#cofano-event .cofano-eventlist-event .cofano-event-details-attrs {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+
+    #cofano-event #delete .material-icons {
+        display: block !important;
+    }
+
+    #cofano-event #delete .button-text {
+        display: none !important;
+    }
+
+    #cofano-event #signup .material-icons {
+        display: block !important;
+    }
+
+    #cofano-event #signup .button-text {
+        display: none !important;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    #cofano-event .cofano-event-details-button-wrapper {
+        display: flex;
+    }
+
+    #cofano-event .cofano-content-header-text {
+        font-size: 30px;
+    }
+
+    #cofano-event .cofano-content-timetable-data-wrapper {
+        flex-direction: unset;
+    }
+
+    #cofano-event .cofano-event-signedup-wrapper {
+        position: relative;
+        height: min-content;
+    }
+
+    #cofano-event .cofano-event-signedup-item {
+        padding: 10px 0;
+    }
+
+    #cofano-event .cofano-content-timetable-data-wrapper {
+        height: unset;
+    }
+
+    #cofano-event .cofano-content-eventlist-details {
+        max-height: unset !important;
+    }
+
+    #cofano-event .cofano-content-eventlist-wrapper .cofano-event-details {
+        flex-direction: column;
+    }
+
+    #cofano-event .cofano-event-details > div {
+        padding: 0;
+    }
+
+    #cofano-event .cofano-content-eventlist-wrapper > .seperator {
+        display: inherit;
+    }
+
+
+
+}

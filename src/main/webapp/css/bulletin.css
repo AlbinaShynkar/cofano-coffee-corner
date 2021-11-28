@@ -1,0 +1,71 @@
+#cofano-bulletin .cofano-content-masonry-wrapper {
+    overflow: auto;
+    margin-top: 20px;
+    padding: 0 15px;
+}
+
+#cofano-bulletin .cofano-content-masonry {
+    width: 100%;
+    column-count: 1;
+}
+
+#cofano-bulletin .cofano-content-masonry .card {
+    border: none;
+}
+
+#cofano-bulletin .cofano-content-masonry .card-img-top {
+    object-fit: cover;
+    max-height: 100px;
+}
+
+#cofano-bulletin .cofano-content-masonry .card-title span {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: 0 0 15px 10px var(--c-colour-card-background);
+    background-color: var(--c-colour-card-background);
+}
+
+#cofano-bulletin .cofano-content-masonry .card-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+#cofano-bulletin .cofano-content-masonry .card:hover .card-title span {
+    display: block;
+}
+
+#cofano-bulletin .cofano-content-masonry-add-wrapper {
+    position: absolute;
+    z-index: 1;
+    bottom: 70px;
+    right: 80px;
+}
+
+#cofano-bulletin .cofano-content-masonry-load-wrapper {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.cofano-overlay-window#cofano-overlay-bulletin-view {
+    width: 500px;
+}
+
+@media (min-width: 768px) {
+    #cofano-bulletin .cofano-content-masonry {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    #cofano-bulletin .cofano-content-masonry {
+        column-count: 3;
+    }
+}

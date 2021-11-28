@@ -1,0 +1,118 @@
+#cofano-chat .cofano-content-chatbox-wrapper {
+    min-height: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+}
+
+#cofano-chat .cofano-content-starredmsg-wrapper {
+    margin-top: 20px;
+    overflow: auto;
+    flex-grow: 1;
+}
+
+#cofano-chat .cofano-content-chatbox {
+    border-top: 2px solid;
+    overflow: auto;
+}
+
+#cofano-chat .cofano-content-send-wrapper {
+    margin-top: 10px;
+}
+
+#cofano-chat .cofano-content-send-wrapper form {
+    width: 100%;
+}
+
+#cofano-chat .cofano-content-send {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+#cofano-chat .cofano-content-send input {
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+}
+
+#cofano-chat .cofano-content-send input[type=text] {
+    flex-grow: 1;
+    margin-right: 40px;
+}
+
+#cofano-chat .cofano-content-send .button {
+    padding: 10px 30px;
+    font-size: 19px;
+}
+
+#cofano-chat .cofano-content-chatbox-message {
+    display: flex;
+    padding: 5px;
+}
+
+#cofano-chat .cofano-content-message-icon {
+    padding: 5px;
+    margin-right: 10px;
+    display: none;
+}
+
+#cofano-chat .cofano-content-message-text {
+    flex-grow: 1;
+    padding: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#cofano-chat .cofano-starredmsg-card .cofano-content-message-text {
+    border: none;
+}
+
+#cofano-chat .cofano-content-message-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cofano-chat .cofano-content-message-sender {
+    font-weight: bold;
+}
+
+#cofano-chat .cofano-content-message-title > div > span {
+    vertical-align: middle;
+    margin-right: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+#cofano-chat .cofano-content-chatbox-message:hover .cofano-content-message-title > div > span {
+    display: inline;
+}
+
+#cofano-chat .cofano-content-chatbox-message[starred="true"] .cofano-content-message-title > div > span {
+    display: inline;
+}
+
+#cofano-chat .cofano-content-message-body {
+    max-width: fit-content;
+}
+
+#cofano-chat .cofano-content-chatbox-load-wrapper {
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+}
+
+#cofano-chat .cofano-starredmsg-masonry {
+    column-count: 2;
+}
+
+#cofano-chat .cofano-starredmsg-card {
+    border: none;
+}
+
+@media (min-width: 768px) {
+    #cofano-chat .cofano-content-message-icon {
+        display: block;
+    }
+}

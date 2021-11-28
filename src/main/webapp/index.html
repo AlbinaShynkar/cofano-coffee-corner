@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Roboto+Slab:wght@400;500&display=swap"
+              rel="stylesheet">
+        <link rel="stylesheet" href="css/hamburger.css">
+        <link rel="stylesheet" href="css/prettyfy.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+        <link rel="stylesheet" href="css/chat.css">
+        <link rel="stylesheet" href="css/bulletin.css">
+        <link rel="stylesheet" href="css/event.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js?onload=authInit" async defer></script>
+        <script src="js/googleauth.js"></script>
+        <script src="js/cofano.js"></script>
+        <script src="js/templates.js"></script>
+        <script src="js/rest.js"></script>
+        <script src="js/sseconnect.js"></script>
+        <script>
+
+
+            window.onload = function ()  {
+
+                $(document).click(function(e) {
+                    if (!$(e.target).is('.cofano-body-iconbar *'))
+                        $(".cofano-popup").hide();
+                });
+
+                $(".cofano-content-card").hover(() => {
+                        $(this).find(".cofano-content-card-image").toggleClass("shadow-1 shadow-3");
+                });
+
+            }
+
+        </script>
+        <title>Login | Cofano Coffee Corner</title>
+    </head>
+    <body>
+        <div class="cofano-loading">
+            <img src="img/cofano_coffeecorner_pageload.gif"/>
+        </div>
+        <div class="cofano-login-wrapper">
+            <div class="cofano-login-panel">
+                <img src="img/cofano_coffeecorner_login_logo.png" class="cofano-login-panel-image"/>
+                <div class="cofano-login-panel-content">
+                    <h1 class="cofano-login-panel-title">Welcome!</h1>
+                    <p class="cofano-login-panel-body">This is the Digital Coffee Corner for Cofano Software Solutions. Before the situation regarding COVID-19, the employees at Cofano would share their creative minds with each other, whilst enjoying a cup of coffee. That's why, in times of Corona, this digital meeting ground has been set up.</p>
+                </div>
+                <div class="seperator">Sign In</div>
+                <div id="my-signin2" class="cofano-login-panel-signinbutton"></div>
+            </div>
+        </div>
+        <div class="cofano-panel-wrapper">
+            <div class="cofano-alert-wrapper"></div>
+            <div class="cofano-panel shadow-5">
+
+
+            <!--Navbar-->
+                <div class="cofano-panel-nav-wrapper shadow-5">
+                    <div class="cofano-nav-list-wrapper">
+                        <div class="cofano-nav-title-wrapper">
+                            <div class="cofano-nav-title">
+                                <h4 class="cofano-nav-title-text">Coffee Corner</h4>
+                                <img src="img/cofano_smallnav_logo.png" class="cofano-nav-title-icon"/>
+                            </div>
+                        </div>
+                        <ul class="cofano-nav-list"></ul>
+                    </div>
+                </div>
+
+            <!--Body-->
+                <div class="cofano-panel-body-wrapper">
+
+               <!--Overlay -->
+                    <div class="cofano-panel-overlay">
+                        <div class="cofano-overlay-window shadow-3" id="cofano-overlay-bulletin-new">
+                            <h2 class="cofano-overlay-window-title">Create a new Bulletin</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="cofano-input-bulletin-tl">Title</label>
+                                    <input type="text" class="form-control" placeholder="Title" id="cofano-input-bulletin-tl">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cofano-input-bulletin-dc">Description</label>
+                                    <textarea class="form-control" id="cofano-input-bulletin-dc"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cofano-input-bulletin-img">Image URL</label>
+                                    <input type="text" class="form-control" placeholder="Image" id="cofano-input-bulletin-img">
+                                </div>
+                                <div class="cofano-overlay-button-wrapper">
+                                    <input class="button button-teal shadow-1-hover" type="submit" value="Create">
+                                    <button class="button shadow-1-hover" type="button" onclick="overlayClose()">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="cofano-overlay-window shadow-3" id="cofano-overlay-bulletin-view">
+                            <div class="cofano-overlay-button-wrapper">
+                                <button class="button button-red shadow-1-hover">Delete</button>
+                                <button class="button shadow-1-hover" onclick="bulletinCloseView()">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="cofano-overlay-window shadow-3" id="cofano-overlay-event-new">
+                            <h2 class="cofano-overlay-window-title">Create a new Event</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="cofano-input-event-tl">Title</label>
+                                    <input type="text" class="form-control" id="cofano-input-event-tl" placeholder="Event Title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cofano-input-event-ds">Description <small>(optional)</small></label>
+                                    <textarea type="text" class="form-control" id="cofano-input-event-ds"></textarea>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label for="cofano-input-event-sd">Start Date</label>
+                                        <input type="date" class="form-control" id="cofano-input-event-sd">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="cofano-input-event-st">Start Time</label>
+                                        <input type="time" class="form-control" id="cofano-input-event-st">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="cofano-input-event-ed">End Date</label>
+                                        <input type="date" class="form-control" id="cofano-input-event-ed">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="cofano-input-event-et">End Time</label>
+                                        <input type="time" class="form-control" id="cofano-input-event-et">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-8">
+                                        <label for="cofano-input-event-img">Image <small>(optional)</small></label>
+                                        <input type="text" class="form-control" id="cofano-input-event-img" placeholder="Image URL">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cofano-input-event-ty">Type</label>
+                                        <select id="cofano-input-event-ty" class="form-control">
+                                            <option selected>Unspecified</option>
+                                            <option>Break</option>
+                                            <option>Meeting</option>
+                                            <option>Stand-up Meeting</option>
+                                            <option>Lunch</option>
+                                            <option>Corporate Event</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="cofano-overlay-button-wrapper">
+                                    <input class="button button-teal shadow-1-hover" type="submit" value="Create">
+                                    <button class="button shadow-1-hover" type="button" onclick="overlayClose()">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                <!--Icon bar-->
+                    <div class="cofano-body-iconbar">
+                        <div class="cofano-iconbar-icon" id="cofano-iconbar-menu" onclick="toggleNavBar()" title="Toggle Menu">
+                            <!--                            <button class="hamburger hamburger&#45;&#45;arrowturn" type="button">
+                                                            <span class="hamburger-box">
+                                                                <span class="hamburger-inner"></span>
+                                                            </span>
+                                                        </button>-->
+                            <span class="material-icons">menu</span>
+                        </div>
+                    </div>
+
+                <!--Dashboard-->
+                    <div class="container-fluid cofano-body-content-wrapper" id="cofano-dashboard" style="display: none">
+                        <div class="row cofano-content-header">
+                            <div class="col">
+                                <h1 class="cofano-content-header-text text-center"></h1>
+                                <h5 class="cofano-content-header-subtext text-center"></h5>
+                                <div class="cofano-content-icon-wrapper"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 seperator"></div>
+                        </div>
+                        <div class="row cofano-content-cards"></div>
+                    </div>
+
+                <!--Chat-->
+                    <div class="container-fluid cofano-body-content-wrapper" id="cofano-chat">
+                        <div class="row cofano-content-header">
+                            <div class="col">
+                                <h2 class="cofano-content-header-text text-center"></h2>
+                            </div>
+                        </div>
+                        <div class="row cofano-content-chatbox-wrapper no-gutters">
+                            <div class="cofano-content-chatbox-date-wrapper">
+                                <span class="cofano-content-chatbox-date"></span>
+                            </div>
+                            <div class="cofano-content-chatbox">
+                                <ul class="cofano-content-chatbox-messagelist">
+                                    <li class="cofano-content-chatbox-load-wrapper">
+                                        <button class="cofano-content-chatbox-load button button-teal shadow-1-hover"></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row cofano-content-starredmsg-wrapper">
+                            <div class="col card-columns cofano-starredmsg-masonry"></div>
+                        </div>
+                        <div class="row cofano-content-send-wrapper no-gutters">
+                            <form>
+                                <div class="col cofano-content-send">
+                                    <input class="shadow-1-hover" type="text">
+                                    <input class="button button-teal shadow-1-hover" type="submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                <!--Bulletin Board-->
+                    <div class="container-fluid cofano-body-content-wrapper" id="cofano-bulletin">
+                        <div class="row cofano-content-header">
+                            <div class="col">
+                                <h2 class="cofano-content-header-text text-center"></h2>
+                            </div>
+                        </div>
+                        <div class="row cofano-content-masonry-wrapper">
+                            <div class="cofano-content-masonry-add-wrapper">
+                                <button class="cofano-content-masonry-add button-round button-teal shadow-1-hover">
+                                    <span class="material-icons"></span>
+                                </button>
+                            </div>
+                            <div class="card-columns cofano-content-masonry"></div>
+                            <div class="cofano-content-masonry-load-wrapper">
+                                <button class="cofano-content-masonry-load button button-teal shadow-1-hover"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                <!--Upcoming Events-->
+                    <div class="container-fluid cofano-body-content-wrapper" id="cofano-event">
+                        <div class="row cofano-content-header">
+                            <div class="col">
+                                <h2 class="cofano-content-header-text text-center"></h2>
+                            </div>
+                        </div>
+                        <div class="row no-gutters cofano-content-timetable-wrapper">
+                            <button class="cofano-timetable-add-button button-teal button-round shadow-1-hover" onclick="eventAdd()">
+                                <span class="material-icons">add</span>
+                            </button>
+                            <div class="col shadow-1 cofano-content-timetable">
+                                <div class="cofano-content-timetable-header"></div>
+                                <div class="cofano-content-timetable-body">
+                                    <span class="cofano-content-timetable-indicator"></span>
+                                    <div class="cofano-content-event-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters cofano-content-timetable-data-wrapper">
+                            <div class="col-12 col-lg-8 shadow-1 cofano-event-details-wrapper">
+                                <div class="cofano-event-details">
+                                    <div class="cofano-event-details-metadata">
+                                        <h4 class="cofano-event-details-title"></h4>
+                                        <small class="cofano-event-details-time"></small>
+                                        <p class="cofano-event-details-body"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 shadow-1 cofano-event-signedup-wrapper"> </div>
+                        </div>
+                        <div class="row cofano-content-eventlist-wrapper">
+                            <div class="col-12 col-lg-5 cofano-content-eventlist">
+                                <ul class="list-group"></ul>
+                            </div>
+                            <div class="seperator">Selected</div>
+                            <div class="col-12 col-lg-7 cofano-content-eventlist-details"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

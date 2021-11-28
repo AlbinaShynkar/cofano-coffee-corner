@@ -1,0 +1,349 @@
+[33mcommit ddf17d33bc54c86176c1e4cccbb41aa8811fd364[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 24 18:16:22 2020 +0200
+
+    sseconnect.js subscribes user to SSE
+
+[33mcommit 11fb0ff11077a84641c8cb59d6db2d69d4c87312[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 24 15:53:46 2020 +0200
+
+    Fixed compilation error
+
+[33mcommit 8d2bf3db45e12f9c5724c06fc001960f2825d6f6[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 24 15:27:18 2020 +0200
+
+    ChatController has basic GET and POST requests for SSE
+
+[33mcommit 550ca88038102762d63c49c3075156a208821722[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 24 15:22:50 2020 +0200
+
+    Added SSE support in pom.xml
+
+[33mcommit e41c93230367677e0eb4e1df4102fa98a8cc0438[m
+Merge: 6d6b738 a32b73e
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 24 12:13:51 2020 +0200
+
+    Merge branch 'master' of https://git.snt.utwente.nl/s2305399/cofanocoffeecorner
+
+[33mcommit a32b73eb58edbd965d604cb7b3cb9431b766eaab[m
+Author: jvanamerongen2002 <57096003+jvanamerongen2002@users.noreply.github.com>
+Date:   Sun May 24 12:03:13 2020 +0200
+
+    First REST implementation: Dashboard and Default
+
+[33mcommit 6d6b738b478dd255b6cf2d3489056dd71f1db9cb[m
+Merge: b34bfd1 1e7329c
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 24 11:49:55 2020 +0200
+
+    Merge branch 'master' of https://git.snt.utwente.nl/s2305399/cofanocoffeecorner
+
+[33mcommit b34bfd1df2ac254fdb40f33d2a2f88b862fce491[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 24 11:49:45 2020 +0200
+
+    added asynch support to web.xml
+
+[33mcommit 1e7329ca1fcb10ec190c4721dbe2be70ee87ecd6[m
+Author: s2207966 <a.shynkar@student.utwente.nl>
+Date:   Sat May 23 17:27:43 2020 +0200
+
+    Pages Controller - Albina
+
+[33mcommit 50dd7df05f6062f2cef50a40ec168e44ef283f4c[m
+Author: s2207966 <a.shynkar@student.utwente.nl>
+Date:   Sat May 23 15:09:36 2020 +0200
+
+    PagesController- Albina
+
+[33mcommit ad6863393dd4503bd3f1ea0087b91dec7c097a2d[m
+Merge: ebbf35c fbcd1d2
+Author: s2207966 <a.shynkar@student.utwente.nl>
+Date:   Sat May 23 14:45:17 2020 +0200
+
+    Merge branch 'master' of https://git.snt.utwente.nl/s2305399/cofanocoffeecorner
+
+[33mcommit ebbf35c7bfd76192d7094fe552534ce62235919b[m
+Author: s2207966 <a.shynkar@student.utwente.nl>
+Date:   Sat May 23 14:44:42 2020 +0200
+
+    Fiixed DAO's -Albina
+
+[33mcommit fbcd1d29ee0b0ce0a5e258131f656066c125e4d5[m
+Author: jvanamerongen2002 <57096003+jvanamerongen2002@users.noreply.github.com>
+Date:   Sat May 23 14:39:58 2020 +0200
+
+    Created DashboardDAO and ChatDAO
+
+[33mcommit ab57cbcb7381ce3fa861aeeba8ef96c3744ff097[m
+Author: s2207966 <a.shynkar@student.utwente.nl>
+Date:   Sat May 23 12:38:18 2020 +0200
+
+    PageDAO-Albina
+
+[33mcommit 4cd12047ee3c5bff83629517f897274c189569a1[m
+Author: s2207966 <a.shynkar@student.utwente.nl>
+Date:   Sat May 23 12:28:25 2020 +0200
+
+    PageDAO -Albina
+
+[33mcommit e86ade4f514d0c86bcb9cd10b2555220404c0e50[m
+Author: jvanamerongen2002 <57096003+jvanamerongen2002@users.noreply.github.com>
+Date:   Sat May 23 12:19:07 2020 +0200
+
+    BE: updated all DAO's and their models, exept PageDAO
+
+[33mcommit bbb43c88952fcf79ab0c0ded081a0f732c5a057e[m
+Author: jvanamerongen2002 <57096003+jvanamerongen2002@users.noreply.github.com>
+Date:   Sat May 23 11:48:12 2020 +0200
+
+    BE: fixed some design issues with @Albina
+
+[33mcommit 7b672435d6fb901b70d853c4c929c226be8e54c2[m
+Merge: 52afb3c dd21a5b
+Author: jvanamerongen2002 <57096003+jvanamerongen2002@users.noreply.github.com>
+Date:   Fri May 22 22:01:47 2020 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 52afb3c61176b5c45c43b1153ddd361b58418c32[m
+Author: jvanamerongen2002 <57096003+jvanamerongen2002@users.noreply.github.com>
+Date:   Fri May 22 22:01:11 2020 +0200
+
+    FE: Implemented the responsive navbar for the largest two breakpoints. Did some restyling and remodelling.
+
+[33mcommit dd21a5b04dd14732fc07bd8902578bb676eb0a17[m
+Author: s2207966 <a.shynkar@student.utwente.nl>
+Date:   Fri May 22 19:41:33 2020 +0200
+
+    PageDAO + Page implementation, fixing Bulletin- Albina
+
+[33mcommit 03bb90d0079827eb0aaf7e12f2952fe56ff5fdfd[m
+Author: s2207966 <a.shynkar@student.utwente.nl>
+Date:   Fri May 22 15:52:34 2020 +0200
+
+    Finished BulletinDAO -Albina
+
+[33mcommit 18a0bc63e4283c17141a3f0d41623ab4f5eefc36[m
+Author: s2472651 <e.yardim@student.utwente.nl>
+Date:   Fri May 22 13:02:55 2020 +0300
+
+    EventDAO added
+
+[33mcommit c953abe3b537705c14a5a2de206d7641caf1a871[m
+Author: s2473593 <n.gunay@student.utwente.nl>
+Date:   Fri May 22 11:00:25 2020 +0200
+
+    MessageDAOadded
+
+[33mcommit 897ecde894e87db3d98268151a46a7721833ed6d[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Wed May 20 22:52:19 2020 +0200
+
+    JAR libraries are added in a new folder. Classpath updated
+
+[33mcommit f88a5b4e6b45ab5427161c40b18c7ce7a9de270c[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Wed May 20 20:58:06 2020 +0200
+
+    DAO interface now takes id as String
+
+[33mcommit af49da8511093ef5e5b22909fab4290be5f927c5[m
+Merge: 1c879ca 426a994
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Wed May 20 20:55:52 2020 +0200
+
+    Removed compilation issues with changes brought to DAO interface
+
+[33mcommit 1c879ca476ed63c6bb02b20b3001a9ab088e4139[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Wed May 20 20:31:00 2020 +0200
+
+    DAO interface now takes String id. Please updaate DAO classes accordingly
+
+[33mcommit 426a994b86bc704a90ab33a023f9d87f7d6fea62[m
+Author: jvanamerongen2002 <57096003+jvanamerongen2002@users.noreply.github.com>
+Date:   Wed May 20 10:35:18 2020 +0200
+
+    First commit for FE
+    Added tester index.html
+
+[33mcommit 760bd503a4bb6a9299020fde2496d91152c7f05a[m
+Author: s2207966 <a.shynkar@student.utwente.nl>
+Date:   Tue May 19 19:16:12 2020 +0200
+
+    Test Comments Deleted- Albina
+
+[33mcommit f5d60ff17ab690764f3974e771ba3d8d0a3a8735[m
+Author: s2472651 <e.yardim@student.utwente.nl>
+Date:   Tue May 19 19:28:34 2020 +0300
+
+    push2
+
+[33mcommit cca914d2c1fa4cf8e112c2688846707353880a8f[m
+Merge: d13141d 214c0c8
+Author: s2473593 <n.gunay@student.utwente.nl>
+Date:   Tue May 19 18:24:54 2020 +0200
+
+    checkpush
+
+[33mcommit d13141d1b0c3411c23d842be1f0ba7889549a1f2[m
+Author: s2473593 <n.gunay@student.utwente.nl>
+Date:   Tue May 19 18:23:36 2020 +0200
+
+    checkpush
+
+[33mcommit 214c0c88b0a3b10b4fba6d23f3d4e38200f8d07a[m
+Author: s2472651 <e.yardim@student.utwente.nl>
+Date:   Tue May 19 19:22:46 2020 +0300
+
+    test
+
+[33mcommit 413176506d948356a58e4e2ba02f387611d4462f[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Tue May 19 18:14:33 2020 +0200
+
+    DAO now in data package
+
+[33mcommit 2b06f9152a5d95f4c1a402390054010ba6a40292[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Mon May 18 22:11:03 2020 +0200
+
+    Renamed Project
+
+[33mcommit a78e1c4e2b9726ffbb417bcb7fcecf5a0c69faa9[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Mon May 18 19:33:20 2020 +0200
+
+    All servlets renamed to Controller to fit the MVC structure
+
+[33mcommit d1ef8774b8c789f2706806dc306ba45949c63f0b[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Mon May 18 19:32:21 2020 +0200
+
+    Added general Database class with standard SQL functions for JDBC
+
+[33mcommit e87d205c1193095c28e845e8be50decfbf2358a3[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Mon May 18 18:40:08 2020 +0200
+
+    Changed file structure
+
+[33mcommit 5f7c87f083805ae0c7f7d6d225e23c3094adeb00[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Mon May 18 12:26:22 2020 +0200
+
+    Removed all warnings
+
+[33mcommit f8e3a44a82fd9a248e88154ad95891b5f700d612[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Mon May 18 12:05:46 2020 +0200
+
+    Added a DAO interface with some possible implementations, plus some Service classes stubs to handle requests
+
+[33mcommit 9db19b98d5614f2ed02067613aaaaf6cb13dafc0[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Mon May 18 10:43:04 2020 +0200
+
+    Updated web.xml version. Added BulletinServives to test JAXRS
+
+[33mcommit c0a172a9993f240187ef910798f0b7d6b88227fc[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 17 15:34:55 2020 +0200
+
+    Fiexd issues with web.xml, bulletin servlet class stub created
+
+[33mcommit 80ee18e0343210f4616e7803c893f629e6de655a[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 17 15:24:53 2020 +0200
+
+    web.xml file extended
+
+[33mcommit 653ce7a998b7a3f164e987651db6a8ee498c79a7[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 17 15:02:10 2020 +0200
+
+    Added web.xml
+
+[33mcommit e3532a2585f73fd60b1d1f0bf75e945db610dfac[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 17 14:58:15 2020 +0200
+
+    Changed packaging to war
+
+[33mcommit 688eb23fb504b8b17f49961c0db680cb569469f4[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Sun May 17 14:32:54 2020 +0200
+
+    Deleted text.txt
+
+[33mcommit 4b448b2b7fa379ffd70b36b8af563c5da88101fc[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Thu May 14 10:11:07 2020 +0200
+
+    Satisfied conventions
+
+[33mcommit b6344a55c36282581dd7054c11a8a82196627ba6[m
+Author: s2473593 <n.gunay@student.utwente.nl>
+Date:   Thu May 14 01:00:59 2020 +0200
+
+    updated finally
+
+[33mcommit fcb4103f8c7137c4af7e83ff635e695b79bf739b[m
+Author: s2473593 <n.gunay@student.utwente.nl>
+Date:   Thu May 14 00:52:26 2020 +0200
+
+    updated classnames
+
+[33mcommit 41d8672d236e12a3a4261855d52accfca83186f3[m
+Merge: c428e72 5d8aed9
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Wed May 13 23:39:25 2020 +0200
+
+    Added page package
+
+[33mcommit c428e72253b78a4862ca4b6ded7cb2d5e659c7fc[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Wed May 13 23:28:25 2020 +0200
+
+    Added page package
+
+[33mcommit 5d8aed9a24ca2dabff816cd0f7c2075ba528716b[m
+Author: s2472651 <e.yardim@student.utwente.nl>
+Date:   Thu May 14 00:20:57 2020 +0300
+
+    constructor added
+
+[33mcommit 75484a6c2bbb53c57120990b6277e75c6881496e[m
+Author: s2473593 <n.gunay@student.utwente.nl>
+Date:   Wed May 13 18:31:10 2020 +0200
+
+    comment
+
+[33mcommit b8ec0011ea88b1f3a80f62c632e7aff1656aeae9[m
+Author: s2472651 <e.yardim@student.utwente.nl>
+Date:   Wed May 13 18:28:59 2020 +0300
+
+    chatPage packet added
+
+[33mcommit f56c0c668a68642fd972f3dbf705d2ad03e31bed[m
+Author: s2472651 <e.yardim@student.utwente.nl>
+Date:   Wed May 13 14:36:23 2020 +0300
+
+    test
+
+[33mcommit 42a90bfca8e4d23c6b70a4e6c2378d7d66a26899[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Wed May 13 11:43:15 2020 +0200
+
+    Change .project settings
+
+[33mcommit c8721d35f3b6ae127e0c8ce0c4bea5da8b366e8d[m
+Author: s2305399 <a.mariani@student.utwente.nl>
+Date:   Wed May 13 11:36:17 2020 +0200
+
+    Initial commit

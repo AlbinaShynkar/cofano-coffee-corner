@@ -1,0 +1,529 @@
+:root {
+    --roboto: 'Roboto', sans-serif;
+    --roboto_slab: 'Roboto Slab', sans-serif;
+    --open_sans: 'Open Sans', sans-serif;
+    --c-colour-text: rgba(0, 0, 0, 0.6);
+    --c-colour-card-background: rgb(255, 255, 255);
+    --c-colour-panel-background: rgba(240, 240, 240, 0.97);
+    --c-colour-nav-background: rgba(255, 255, 255, 0.85);
+    --c-colour-popup-background: rgb(255, 255, 255);
+    --c-colour-orange: rgb(245, 138, 0);
+    --c-colour-orange-hover:  rgb(220, 125, 0);
+    --c-colour-teal: rgb(0, 132, 132);
+    --c-colour-teal-hover: rgb(0, 110, 110);
+    --c-colour-red: rgb(230, 45, 0);
+    --c-colour-red-hover: rgb(200, 35, 0);
+    --c-img-wash: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
+}
+
+* {
+    color: var(--c-colour-text);
+    font-family: var(--open_sans);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+button:focus, input:focus {
+    outline: none;
+}
+
+input, option {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+input[type='submit'] {
+    border: none;
+    cursor: pointer;
+}
+
+body.light {
+    --c-colour-text: rgba(0, 0, 0, 0.6);
+    --c-colour-card-background: rgb(255, 255, 255);
+    --c-colour-panel-background: rgba(240, 240, 240, 0.97);
+    --c-colour-nav-background: rgba(255, 255, 255, 0.85);
+    --c-colour-popup-background: rgb(255, 255, 255);
+    --c-img-wash: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
+}
+
+body.dark {
+    --c-colour-text: rgba(255, 255, 255, 0.6);
+    --c-colour-card-background: rgba(10, 10, 10, 1);
+    --c-colour-panel-background: rgba(50, 50, 50, 0.95);
+    --c-colour-nav-background: rgba(0, 0, 0, 0.75);
+    --c-colour-popup-background: rgb(95, 95, 95);
+    --c-img-wash: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+}
+
+.card {
+    background-color: var(--c-colour-card-background);
+}
+
+.card-title {
+    position: relative;
+    font-family: var(--roboto);
+    font-weight: 600;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--c-colour-orange);
+}
+
+.cofano-loading {
+    align-self: center;
+    margin: auto;
+}
+
+.cofano-panel-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding: 15px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cofano-alert-wrapper {
+    position: absolute;
+    top: 40px;
+    z-index: 2;
+}
+
+.cofano-panel {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    opacity: 0;
+    display: flex;
+    position: relative;
+}
+
+/*  NAVIGATION SIDEBAR  */
+
+.cofano-panel-nav-wrapper {
+    display: none;
+    flex-shrink: 0;
+    z-index: 1;
+    background-color: var(--c-colour-nav-background);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.cofano-nav-title-wrapper {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.cofano-nav-title {
+    height: 100px;
+    border-bottom: 2px solid var(--c-colour-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cofano-nav-title-text {
+    margin: 0;
+}
+
+.cofano-nav-title-icon {
+    width: 36px;
+    display: none;
+    position: absolute;
+}
+
+.cofano-nav-button-wrapper {
+    padding: 10px 20px;
+}
+
+.cofano-nav-button {
+    width: 100%;
+    height: unset;
+    padding: 9px;
+    background: none;
+    text-align: left;
+    border-radius: 5px;
+    font-family: var(--roboto);
+    transition: all ease-in 0.1s;
+}
+
+.cofano-nav-button span {
+    vertical-align: middle;
+}
+
+.cofano-nav-button.active span {
+    color: white;
+    font-weight: normal;
+}
+
+.cofano-nav-button-icon {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.cofano-nav-button-text {
+    font-weight: bold;
+}
+
+
+/*  BODY  */
+.cofano-panel-body-wrapper {
+    min-width: 0;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--c-colour-panel-background);
+    border-radius: 25px;
+}
+
+
+
+/* OVERLAY */
+.cofano-panel-overlay {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    border-radius: 25px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.cofano-overlay-window {
+    width: 700px;
+    height: min-content;
+    padding: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.cofano-overlay-window .input-group {
+    margin: 20px 0;
+}
+
+.cofano-overlay-window textarea {
+    height: 200px;
+    max-height: 200px;
+}
+
+.cofano-overlay-window-title {
+    font-family: var(--roboto);
+}
+
+.cofano-overlay-button-wrapper {
+    text-align: end;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.cofano-overlay-button-wrapper > * {
+    margin-left: 20px;
+}
+
+
+/* ICONBAR */
+.cofano-body-iconbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.cofano-iconbar-icon {
+    margin-left: 40px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+}
+
+#cofano-iconbar-menu {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.cofano-iconbar-icon span {
+    font-size: 36px;
+}
+
+.cofano-iconbar-icon-badge {
+    position: absolute;
+    border-radius: 50%;
+}
+
+#cofano-iconbar-icon-1 .cofano-iconbar-icon-badge {
+    width: 22px;
+    height: 22px;
+    bottom: 0;
+    right: -10px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 22px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: var(--c-colour-orange);
+}
+
+#cofano-iconbar-icon-3 .cofano-iconbar-icon-badge {
+    width: 15px;
+    height: 15px;
+    right: 0;
+    bottom: 7px;
+    background-color: var(--green);
+}
+
+
+.cofano-iconbar-extension {
+    width: 300px;
+    position: absolute;
+    top: 64px;
+    z-index: 3;
+    font-size: 14px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--c-colour-popup-background);
+}
+
+.cofano-iconbar-extension:not(#cofano-iconbar-extension-3) .cofano-iconbar-extension-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.cofano-iconbar-extension-header {
+    font-weight: 600;
+    text-align: center;
+}
+
+.cofano-iconbar-extension-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+}
+
+#cofano-iconbar-extension-1 .cofano-iconbar-extension-item {
+    cursor: pointer;
+}
+
+#cofano-iconbar-extension-1 .material-icons {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#cofano-iconbar-extension-1 .cofano-iconbar-extension-item .badge-orange {
+    padding: .3em .6em;
+    color: white;
+    background-color: var(--c-colour-orange);
+}
+
+#cofano-iconbar-extension-2 .list-group {
+    max-height: 400px;
+    overflow: auto;
+}
+
+#cofano-iconbar-extension-2 .cofano-iconbar-extension-item > img {
+    width: 40px;
+    height: 40px;
+}
+
+#cofano-iconbar-extension-2 .cofano-iconbar-extension-item > div {
+    height: 40px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#cofano-iconbar-extension-2 .cofano-iconbar-extension-item small::before {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#cofano-iconbar-extension-2 .cofano-iconbar-extension-item .online::before {
+    background-color: var(--green);
+}
+
+#cofano-iconbar-extension-2 .cofano-iconbar-extension-item .dnd::before {
+    background-color: var(--c-colour-red);
+}
+
+#cofano-iconbar-extension-2 .cofano-iconbar-extension-item h6 {
+    margin: 0;
+}
+
+#cofano-iconbar-extension-3 .cofano-iconbar-extension-item:first-of-type {
+    display: block;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+#cofano-iconbar-extension-3 .cofano-iconbar-extension-item #theme-light,
+#cofano-iconbar-extension-3 .cofano-iconbar-extension-item #theme-dark {
+    margin: 10px;
+    cursor: pointer;
+}
+
+#cofano-iconbar-extension-3 .cofano-iconbar-extension-item #theme-light::before,
+#cofano-iconbar-extension-3 .cofano-iconbar-extension-item #theme-dark::before {
+    content: '';
+    border: 2px solid orange;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#cofano-iconbar-extension-3 .cofano-iconbar-extension-item #theme-light::before {
+    background-color: white;
+}
+
+#cofano-iconbar-extension-3 .cofano-iconbar-extension-item #theme-dark::before {
+    background-color: black;
+}
+
+#cofano-iconbar-extension-3 .cofano-iconbar-extension-footer button {
+    height: min-content;
+    margin: 5px auto;
+    padding: 8px 24px;
+    display: block;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    font-size: 16px;
+    background: none;
+}
+
+#cofano-iconbar-extension-3 .profile-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-color: var(--green);
+}
+
+#cofano-iconbar-extension-3 h5 {
+    margin: 0;
+}
+
+
+
+
+/* CONTENT */
+.cofano-body-content-wrapper {
+    padding: 0 20px 20px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.cofano-content-header-text {
+    font-family: var(--roboto_slab);
+}
+
+.cofano-content-header-text span {
+    font-size: inherit;
+    cursor: pointer;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.cofano-content-header-subtext {
+    font-family: var(--roboto);
+}
+
+
+
+
+
+/*  MEDIA QUERIES  */
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) { /*Large Tablets*/
+    .cofano-panel {
+        height: 80%;
+    }
+    .cofano-panel-nav-wrapper.active {
+        height: 100%;
+        position: absolute;
+        display: block;
+    }
+    .cofano-body-iconbar.active {
+        padding-left: 256px;
+    }
+    .cofano-body-content-wrapper {
+        padding: 0 40px 40px;
+    }
+}
+
+@media (min-width: 1200px) { /*Small Desktops*/
+    .cofano-panel-nav-wrapper {
+        position: initial;
+        display: block;
+    }
+    .cofano-panel-body-wrapper, .cofano-panel-overlay {
+        border-radius: unset;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    #cofano-iconbar-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .cofano-nav-button-wrapper {
+        padding: 10px;
+    }
+    .cofano-nav-button-text {
+        display: none;
+    }
+    .cofano-nav-button-icon {
+        margin-right: 0;
+    }
+    .cofano-nav-title-text {
+        display: none;
+    }
+    .cofano-nav-title-icon {
+        display: block;
+    }
+}
+
+@media (min-width: 1440px) { /*Large Desktops*/
+    .cofano-panel {
+        width: 1440px;
+    }
+    .cofano-panel-nav-wrapper {
+        flex-basis: 250px;
+    }
+}
